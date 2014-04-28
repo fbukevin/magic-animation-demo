@@ -18,7 +18,8 @@
 
 	<script>
 	
-		/*
+		/*	
+		// Do not work animation iteratively.
 		setTimeout(function() {		
 			$('.magictime2').addClass('magictime puffIn');		
 		}, 2000);
@@ -29,7 +30,7 @@
 
 		$('.opendownleft').hover(
 			function(){$(this).addClass('magictime openDownLeft');},	//handler of hover in
-			function(){													//handler of hover out	
+			function(){							//handler of hover out	
 				setTimeout(function(){
 				$('.opendownleft').removeClass('magictime openDownLeft');
 				}, 3000); 
