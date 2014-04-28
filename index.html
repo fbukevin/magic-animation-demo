@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test miniMAC-magic animation</title>
+	<link rel="stylesheet" href="magic.css">
+</head>
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<div class="magictime2" style="background-color:red; margin:auto; width: 500px; height: 50px">
+		<center><br>magictime + puffIn + 2 second countdown</center>
+	</div>
+	<br>
+	<div class="opendownleft" style="background-color:red; margin:auto; width: 500px; height: 50px">
+		<center><br>magictime + openDownLeft</center>
+	</div>
+
+	<script>
+	
+		/*
+		setTimeout(function() {		
+			$('.magictime2').addClass('magictime puffIn');		
+		}, 2000);
+		*/
+		setInterval(function(){
+			$('.magictime2').toggleClass('magictime puffIn');
+		}, 2000);
+
+		$('.opendownleft').hover(
+			function(){$(this).addClass('magictime openDownLeft');},	//handler of hover in
+			function(){													//handler of hover out	
+				setTimeout(function(){
+				$('.opendownleft').removeClass('magictime openDownLeft');
+				}, 3000); 
+			}		
+		);
+
+	</script>
+</body>
+</html>
